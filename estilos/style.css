@@ -31,21 +31,68 @@ body{
     font-family: var(--font-principal);
 }
 
+a.externo::after{
+    content: '\00A0\1F517';
+}
+
+div.video{
+    background-color: var(--third-color);
+    margin: 0px -20px 30px -20px;
+    padding: 15px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 88%;
+}
+
 header{
-    background-color: var(--fifth-color);
+    min-height: 150px;
+    padding-top: 30px;
+    background-image: linear-gradient(to bottom, var(--fourth-color),var(--fifth-color), var(--sixth-color) );
+    text-align: center;
 }
 
 header > h1{
+    margin-bottom: 20px;
     color: white;
     font-family: var(--font-emphasis);
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+    font-weight: normal;
 }
 
 header > p{
+    max-width: 600px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: var(--font-principal);
+    font-size: 1.2em;
     color: white;
 }
 
 nav{
+    padding: 10px;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.253);
     background: var(--sixth-color);
+}
+
+nav > a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition-duration: .6s;
+}
+
+nav > a:hover{
+    background-color: var(--fifth-color);
+    border-radius: 2px;
 }
 
 main{
@@ -60,11 +107,47 @@ main{
 }
 
 main h1{
+    color: var(--sixth-color);
     font-family: var(--font-android);
+    text-align: center;
+    font-weight: normal;
 }
 
 main h2{
+    color: var(--fifth-color);
+    padding: 5px;
     font-family: var(--font-android);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--second-color), transparent );
+    font-weight: normal;
+}
+
+main p{
+    margin: 15px 0px;
+    line-height: 2em;
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 1.1em;
+}
+
+main strong{
+    color: var(--fifth-color);
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--sixth-color);
+    background-color: var(--second-color);
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--sixth-color);
+    
 }
 
 main img{
@@ -72,12 +155,51 @@ main img{
 }
 
 main img.pequena{
-    width: 50%;
+    max-width: 300px;
     display: block;
     margin: auto;
 }
 
-footer{
-    background-color: var(--sixth-color);
+aside{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--first-color);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.192);
+}
+
+aside > h3{
+    background-color: var(--fifth-color);
     color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0' ;
+    list-style-position: inside;
+    columns: 2;
+}
+
+aside li{
+    padding: 10px;
+}
+
+footer{
+    padding: 10px;
+    background-color: var(--sixth-color);
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--third-color);
 }
